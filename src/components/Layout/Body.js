@@ -22,13 +22,15 @@ function Body() {
         name={item.name}
         price={item.price}
         image={item.image}
+        rating={item.rating}
       />
     );
   });
-
+  console.log();
   return (
     //nav bar
     <div>
+      <p class="text-xl font-sans">This is some text using Josefin Sans.</p>
       <ShoppingCart />
       <div
         className="bg-slate-50 flex justify-between 
@@ -42,15 +44,15 @@ function Body() {
           />
         </div>
         <div className="flex pr-10 gap-8">
-          <p className="h-100">Home</p>
-          <p>Categories</p>
-          <p>About Us</p>
-          <p>Contact Us</p>
+          <p className="cursor-pointer">Home</p>
+          <p className="cursor-pointer">Categories</p>
+          <p className="cursor-pointer">About Us</p>
+          <p className="cursor-pointer">Contact Us</p>
 
-          <div>
+          <div className="cursor-pointer">
             <FaRegUser />
           </div>
-          <div onClick={openCart}>
+          <div onClick={openCart} className="cursor-pointer">
             <span>{cartQuantity}</span>
             <BsCartCheck />
           </div>

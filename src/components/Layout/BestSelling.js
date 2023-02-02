@@ -10,18 +10,55 @@ function BestSelling(props) {
     removeFromCart,
   } = useCart();
   const quantity = getItemQuantity(props.id);
+  const rat = [1, 2, 3, 4, 5];
   return (
     <section>
-      <div>
+      <div className="w-[180px] text-[15px] font-semibold">
         <img
           src={`../../images/${props.image}`}
-          className="w-[164px] h-[204px] rounded-lg "
+          className="w-[180px] h-[210px] rounded-lg "
         />
         <p>{props.name}</p>
+
         <div className="flex gap-2 mb-[94px]">
-          <img src="../../images/star.png" className="h-[19px] w-[19px]" />
-          <img src="../../images/starEmpty.png" className="h-[19px] w-[19px]" />
-          <span>4.0</span>
+          {/* <BsStarHalf
+            color="orange"
+            background="orange"
+            border="1px"
+            borderColor="red"
+            borderStyle="solid"
+          />
+
+          {rat.map((item, i) => {
+            return item <= Number(props.rating.toFixed()) ? (
+              <BsStarFill color="orange" />
+            ) : (
+              <BsStar color="orange" />
+            );
+          })} */}
+          {/* Number(props.rating.toFixed()) */}
+          {rat.map((item, i) => {
+            console.log(item);
+            console.log(Math.abs(2.8 - item));
+            return item <= Math.floor(props.rating) ? (
+              <img src="../../images/star.png" className="h-[19px] w-[19px]" />
+            ) : (Math.abs(props.rating - item) > 0.25) &
+              (Math.abs(props.rating - item) < 0.76) ? (
+              <img
+                src="../../images/starHalf.png"
+                className="h-[19px] w-[19px]"
+              />
+            ) : Math.abs(item - props.rating) < 0.25 ? (
+              <img src="../../images/star.png" className="h-[19px] w-[19px]" />
+            ) : (
+              <img
+                src="../../images/starEmpty.png"
+                className="h-[19px] w-[19px]"
+              />
+            );
+          })}
+
+          <span>{props.rating}</span>
         </div>
       </div>
 

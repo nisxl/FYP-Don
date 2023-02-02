@@ -14,7 +14,9 @@ const Header = () => {
         <Link to="/main"> Main </Link>
         <span> | </span>
         {user ? (
-          <p onClick={logoutUser}>Logout</p>
+          <p onClick={logoutUser} className="cursor-pointer">
+            Logout
+          </p>
         ) : (
           <Link to="/login">Login</Link>
         )}

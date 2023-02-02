@@ -1,23 +1,33 @@
 [
     {"id": 1,
     "name": "Black Forest & cinnamon cake",
-    "price" : 1.05,
-    "image": "cake1.jpg"
+    "price" : 400,
+    "image": "cake1.jpg",
+    "rating": 4.0
 },
 {"id": 2,
     "name": "Black Forest & cinnamon cake",
-    "price" : 1.05,
-    "image": "cake1.jpg"
+    "price" : 600,
+    "image": "cake1.jpg",
+    "rating": 4.26
 },
 {"id": 3,
     "name": "Black Forest & cinnamon cake",
-    "price" : 1.05,
-    "image": "cake1.jpg"
+    "price" : 900,
+    "image": "cake1.jpg",
+    "rating": 2.1
 },
 {"id": 4,
     "name": "Black Forest & cinnamon cake",
-    "price" : 1.05,
-    "image": "cake1.jpg"
+    "price" : 1000,
+    "image": "cake1.jpg",
+    "rating": 2.8
+},
+{"id": 5,
+    "name": "Black Forest & cinnamon cake",
+    "price" : 1000,
+    "image": "spray.jpg",
+    "rating": 4.7
 }
 
 ]
